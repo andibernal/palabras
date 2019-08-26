@@ -7,7 +7,7 @@ package com.udec.fracesconletrarepetida;
 
 /**
  *
- * @author Admin
+ * @@Andres Bernal, Duvan Casas
  */
 public class Inicio {
 

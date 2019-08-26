@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Admin
+ * @Andres Bernal, Duvan Casas
  */
 public class ClaseString {
     
@@ -24,27 +24,30 @@ public class ClaseString {
         
         
         int tamaño, posicion=0;
+        boolean repite=false;
         tamaño = texto.length();
         int vector [] = new int [tamaño]; 
-        
+        String palabra ="";
         System.out.println("leer ");
         for(int i=0; i<texto.length(); i++){
             System.out.println("analizando: "+texto.charAt(i));
-            for (int j=i; j<texto.length(); j++){
-                 
-                if (i!=j){
-                    if(texto.charAt(i)==texto.charAt(j)){
-                        
-                    }
-                }
+            repite = false;
+            for (int j=i+1; j<texto.length(); j++){
                 
+                if((texto.charAt(i))== (texto.charAt(j))){
+                    System.out.println("se repite: "+texto.charAt(i));
+                    repite = true;
+                        
+                }        
+            }
+            
+            if(repite != true){
+                palabra += texto.charAt(i) ;
+                System.out.println("no se repite: "+texto.charAt(i));
             }
                 
         }
-        System.out.println("no se repite: "+Arrays.toString(vector));
-        
-        
-        
+        System.out.println("la primera letra que no se repite "+palabra.charAt(0));
         
     }
     
